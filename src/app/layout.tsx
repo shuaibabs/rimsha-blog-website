@@ -5,6 +5,7 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { AnimatedBackground } from '@/components/common/animated-background';
+import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
   title: "Rimsha's Tech Blogs",
@@ -17,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
@@ -25,13 +26,20 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet" />
       </head>
       <body className={cn('font-body antialiased bg-background text-foreground')}>
-        <div className="relative flex min-h-screen flex-col">
-            <AnimatedBackground />
-            <Header />
-            <main className="relative z-10 flex-grow">{children}</main>
-            <Footer />
-            <Toaster />
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="relative flex min-h-screen flex-col">
+              <AnimatedBackground />
+              <Header />
+              <main className="relative z-10 flex-grow pt-20 md:pt-24">{children}</main>
+              <Footer />
+              <Toaster />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

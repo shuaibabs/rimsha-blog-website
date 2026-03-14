@@ -3,7 +3,7 @@ import { ArrowRight, Bot, Cpu, Zap } from 'lucide-react';
 import { getFeaturedPosts } from '@/lib/blog-data';
 import { BlogPostCard } from '@/components/blog/blog-post-card';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import { GridAnimation } from '@/components/common/grid-animation';
 
 export default function Home() {
   const featuredPosts = getFeaturedPosts(4);
@@ -31,12 +31,13 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center">
-      <section className="w-full pt-20 pb-12 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32 text-center">
-        <div className="container px-4 md:px-6">
+      <section className="relative w-full pt-20 pb-12 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32 text-center overflow-hidden">
+        <GridAnimation />
+        <div className="container relative z-10 px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
-            <Badge variant="outline" className="mb-4 border-primary/50 text-primary animate-fade-in-up">
+            <div className="inline-block mb-4 rounded-full bg-primary/10 px-4 py-1 text-sm font-medium text-primary animate-fade-in-up border border-primary/20">
               From the Desk of a COER University Student
-            </Badge>
+            </div>
             <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl animate-fade-in-up [animation-delay:200ms]">
               Exploring the Future of <span className="text-primary">Artificial Intelligence</span>
             </h1>
@@ -63,9 +64,9 @@ export default function Home() {
             {features.map((feature, index) => (
               <div 
                 key={feature.title} 
-                className="flex flex-col items-center text-center p-6 rounded-lg border border-transparent hover:border-primary/50 hover:bg-card transition-all"
+                className="flex flex-col items-center text-center p-6 rounded-lg border border-border/20 bg-card/50 hover:border-primary/50 hover:bg-card transition-all group"
               >
-                <div className="mb-4">{feature.icon}</div>
+                <div className="mb-4 p-4 rounded-full bg-primary/10 border border-primary/20 group-hover:scale-110 transition-transform">{feature.icon}</div>
                 <h3 className="text-2xl font-headline font-bold">{feature.title}</h3>
                 <p className="mt-2 text-muted-foreground">{feature.description}</p>
                  <Button variant="link" asChild className="mt-4 text-accent">

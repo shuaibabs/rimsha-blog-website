@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { Bot, Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import { NewsletterForm } from '../common/newsletter-form';
+import { Logo } from '../common/logo';
 
 const navItems = [
   { href: '/about', label: 'About' },
@@ -10,11 +11,11 @@ const navItems = [
 
 export function Footer() {
   return (
-    <footer className="w-full border-t border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <footer className="w-full border-t border-border/20 bg-background/50 backdrop-blur-sm">
       <div className="container grid grid-cols-1 gap-8 px-4 py-12 md:grid-cols-3 md:px-6">
         <div className="flex flex-col items-start gap-4">
-          <Link href="/" className="flex items-center space-x-2">
-            <Bot className="h-6 w-6 text-primary" />
+          <Link href="/" className="flex items-center space-x-3">
+            <Logo />
             <span className="text-lg font-bold font-headline">Rimsha's Tech Blogs</span>
           </Link>
           <p className="text-sm text-muted-foreground">
@@ -52,7 +53,7 @@ export function Footer() {
           <NewsletterForm />
         </div>
       </div>
-      <div className="border-t border-border/40">
+      <div className="border-t border-border/20">
         <div className="container flex items-center justify-between h-16 px-4 md:px-6">
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} Rimsha's Tech Blogs. All rights reserved.

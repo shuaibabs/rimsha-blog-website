@@ -2,11 +2,11 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
-import { Bot, Menu, X } from 'lucide-react';
-
+import { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
+import { Logo } from '@/components/common/logo';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 const navItems = [
   { href: '/', label: 'Home' },
@@ -21,62 +21,76 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto';
+  }, [isMenuOpen]);
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Bot className="h-6 w-6 text-primary" />
-          <span className="font-bold font-headline sm:inline-block">
-            Rimsha's Tech Blogs
-          </span>
-        </Link>
-        <div className="flex flex-1 items-center justify-end space-x-2">
-          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+    <>
+      <header className="fixed top-0 z-50 w-full p-2 md:top-4 md:p-0">
+        <div className="container flex h-14 items-center rounded-full bg-background/50 px-4 shadow-lg shadow-black/5 backdrop-blur-lg md:h-16 md:px-6">
+          <Link href="/" className="mr-auto flex items-center space-x-3">
+            <Logo />
+            <span className="hidden font-bold font-headline sm:inline-block text-lg">
+              Rimsha's Tech Blogs
+            </span>
+          </Link>
+          
+          <nav className="hidden md:flex items-center space-x-1 text-sm font-medium">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  'transition-colors hover:text-primary',
-                  pathname === item.href ? 'text-primary' : 'text-muted-foreground'
+                  'transition-colors rounded-full px-4 py-2 hover:text-primary hover:bg-primary/10',
+                  pathname === item.href ? 'text-primary bg-primary/10' : 'text-muted-foreground'
                 )}
               >
                 {item.label}
               </Link>
             ))}
           </nav>
-          <div className="flex items-center gap-4">
-             <Button
-                variant="ghost"
-                className="md:hidden"
-                size="icon"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-              >
-                {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-                <span className="sr-only">Toggle Menu</span>
-              </Button>
+
+          <div className="ml-auto flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              className="p-2 md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle Menu"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
+        </div>
+      </header>
+      
+      {/* Mobile Menu Overlay */}
+      <div
+        className={cn(
+          "fixed inset-0 z-40 bg-background/80 backdrop-blur-lg md:hidden",
+          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none",
+          "transition-opacity duration-300 ease-in-out"
+        )}
+      >
+        <div className="container flex flex-col items-center justify-center h-full gap-8 pt-16">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={cn(
+                'text-2xl font-headline transition-colors hover:text-primary',
+                pathname === item.href ? 'text-primary' : 'text-muted-foreground'
+              )}
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
       </div>
-       {isMenuOpen && (
-        <div className="md:hidden">
-          <div className="flex flex-col items-center space-y-4 py-4 border-t">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  'text-lg transition-colors hover:text-primary',
-                  pathname === item.href ? 'text-primary' : 'text-muted-foreground'
-                )}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
-    </header>
+    </>
   );
 }
