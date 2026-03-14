@@ -32,7 +32,7 @@ export function Header() {
   return (
     <>
       <header className="fixed top-0 z-50 w-full p-2 md:top-4 md:p-0">
-        <div className="container relative flex h-14 items-center justify-between rounded-full bg-background/50 px-4 shadow-lg shadow-black/5 backdrop-blur-lg md:h-16 md:px-6">
+        <div className="container mx-auto relative flex h-14 items-center justify-between rounded-full bg-background/50 px-4 shadow-lg shadow-black/5 backdrop-blur-lg md:h-16 md:px-6">
           <Link href="/" className="flex items-center space-x-3">
             <Logo />
             <span className="hidden font-bold font-headline sm:inline-block text-lg">
