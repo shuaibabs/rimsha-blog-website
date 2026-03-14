@@ -16,7 +16,7 @@ export default function RoboticsPage() {
   return (
     <div>
       <section className="w-full pt-20 pb-12 md:pt-28 md:pb-20 text-center bg-background/50 backdrop-blur-sm">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
             The Future of Robotics
           </h1>

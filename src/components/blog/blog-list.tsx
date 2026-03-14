@@ -20,7 +20,7 @@ export function BlogList({ posts }: { posts: BlogPost[] }) {
   }, [posts, searchTerm]);
 
   return (
-    <div className="container py-12 md:py-16">
+    <div className="container mx-auto py-12 md:py-16">
       <div className="relative mb-12 max-w-xl mx-auto">
         <Input
           type="text"
