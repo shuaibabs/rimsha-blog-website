@@ -32,15 +32,15 @@ export function Header() {
   return (
     <>
       <header className="fixed top-0 z-50 w-full p-2 md:top-4 md:p-0">
-        <div className="container flex h-14 items-center rounded-full bg-background/50 px-4 shadow-lg shadow-black/5 backdrop-blur-lg md:h-16 md:px-6">
-          <Link href="/" className="mr-auto flex items-center space-x-3">
+        <div className="container relative flex h-14 items-center justify-between rounded-full bg-background/50 px-4 shadow-lg shadow-black/5 backdrop-blur-lg md:h-16 md:px-6">
+          <Link href="/" className="flex items-center space-x-3">
             <Logo />
             <span className="hidden font-bold font-headline sm:inline-block text-lg">
               Rimsha's Tech Blogs
             </span>
           </Link>
           
-          <nav className="hidden md:flex items-center space-x-1 text-sm font-medium">
+          <nav className="hidden md:flex items-center space-x-1 text-sm font-medium absolute left-1/2 -translate-x-1/2">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -55,7 +55,7 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="ml-auto flex items-center gap-2">
+          <div className="flex items-center gap-2">
             <ThemeToggle />
             <button
               className="p-2 md:hidden"

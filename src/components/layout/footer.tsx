@@ -54,7 +54,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-border/20">
-        <div className="container flex items-center justify-between h-16 px-4 md:px-6">
+        <div className="container flex items-center justify-center h-16 px-4 md:px-6">
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} Rimsha's Tech Blogs. All rights reserved.
           </p>
