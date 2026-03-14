@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Abstract futuristic neural network background",
+      "imageUrl": "https://picsum.photos/seed/100/1920/1080",
+      "imageHint": "neural network"
+    },
+    {
+      "id": "blog-1",
+      "description": "A robot arm working on a circuit board",
+      "imageUrl": "https://picsum.photos/seed/101/600/400",
+      "imageHint": "robot arm"
+    },
+    {
+      "id": "blog-2",
+      "description": "Abstract AI brain visualization",
+      "imageUrl": "https://picsum.photos/seed/102/600/400",
+      "imageHint": "AI brain"
+    },
+    {
+      "id": "blog-3",
+      "description": "A person interacting with a holographic interface",
+      "imageUrl": "https://picsum.photos/seed/103/600/400",
+      "imageHint": "holographic interface"
+    },
+    {
+      "id": "blog-4",
+      "description": "City of the future with autonomous vehicles",
+      "imageUrl": "https://picsum.photos/seed/104/600/400",
+      "imageHint": "future city"
+    },
+    {
+      "id": "blog-5",
+      "description": "Glowing circuit board pathways",
+      "imageUrl": "https://picsum.photos/seed/106/600/400",
+      "imageHint": "circuit board"
+    },
+    {
+      "id": "blog-6",
+      "description": "Digital data stream visualization",
+      "imageUrl": "https://picsum.photos/seed/107/600/400",
+      "imageHint": "data stream"
+    },
+    {
+      "id": "about-me",
+      "description": "Portrait of a student in a university setting",
+      "imageUrl": "https://picsum.photos/seed/105/500/500",
+      "imageHint": "university student"
+    }
+  ]
 }
