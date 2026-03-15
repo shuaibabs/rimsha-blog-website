@@ -35,7 +35,7 @@ const posts: BlogPost[] = [
       <p>As we continue to develop these powerful technologies, a global dialogue on AGI safety, ethics, and governance is not just important—it's essential. Researchers, policymakers, and the public must collaborate to create robust frameworks that guide AGI's development responsibly. The future may be uncertain, but one thing is clear: the rise of AGI will be the most significant event in human history, and our preparation for it will define the destiny of our species.</p>
     `,
     tags: ['AI', 'AGI', 'Future Tech'],
-    bloggerUrl: '#',
+    bloggerUrl: 'https://rimshatechblogs.blogspot.com/2026/03/the-ai-revolution-how-artificial.html',
     views: 1258
   },
   {
@@ -58,7 +58,7 @@ const posts: BlogPost[] = [
       <p>While robotics offers immense benefits, its integration also presents challenges, including high initial investment costs and the need for a skilled workforce to manage and maintain these advanced systems. However, the long-term returns in terms of productivity, quality, and competitiveness are undeniable. As technology becomes more accessible, even small and medium-sized enterprises are beginning to embrace automation, leveling the playing field and driving innovation across the sector.</p>
     `,
     tags: ['Robotics', 'Manufacturing', 'Automation'],
-    bloggerUrl: '#',
+    bloggerUrl: 'https://rimshatechblogs.blogspot.com/2026/03/the-ai-revolution-how-artificial.html',
     views: 980
   },
   {
@@ -74,7 +74,7 @@ const posts: BlogPost[] = [
       <p>For decades, we've interacted with computers through flat screens, keyboards, and mice. But a new paradigm is emerging: holographic interfaces. Powered by advancements in augmented reality (AR), spatial computing, and light-field technology, these systems project interactive, three-dimensional visuals directly into our environment. This technology promises to break down the barriers between the digital and physical worlds, creating a more intuitive and immersive user experience. From complex surgical planning and architectural design to remote collaboration and entertainment, the applications are virtually limitless. As we move beyond the screen, we are stepping into a new era of computing where information is no longer confined to a box but is an integrated part of our world.</p>
     `,
     tags: ['Future Tech', 'AR', 'UI/UX'],
-    bloggerUrl: '#',
+    bloggerUrl: 'https://rimshatechblogs.blogspot.com/2026/03/the-ai-revolution-how-artificial.html',
     views: 754
   },
   {
@@ -90,7 +90,7 @@ const posts: BlogPost[] = [
       <p>Quantum computing operates on principles like superposition and entanglement. Unlike classical bits, which are either a 0 or a 1, a quantum bit, or "qubit," can be a 0, a 1, or both at the same time. This allows quantum computers to perform a massive number of calculations simultaneously. While still in its infancy, this technology holds the potential to revolutionize fields like materials science, drug discovery, and cryptography. It could lead to the creation of new materials with incredible properties, the development of life-saving drugs in record time, and also pose a threat to our current encryption standards. The quantum future is complex, but its potential is awe-inspiring.</p>
     `,
     tags: ['Quantum Computing', 'Future Tech', 'Science'],
-    bloggerUrl: '#',
+    bloggerUrl: 'https://rimshatechblogs.blogspot.com/2026/03/the-ai-revolution-how-artificial.html',
     views: 1532
   },
   {
@@ -106,7 +106,7 @@ const posts: BlogPost[] = [
       <p>The development of AI is not just a technical challenge; it's an ethical one. How do we prevent biases in training data from being amplified by AI systems, leading to discriminatory outcomes in areas like hiring and criminal justice? What moral frameworks should guide the decisions of autonomous vehicles in accident scenarios? And what are the implications of developing autonomous weapons that can make life-or-death decisions without human intervention? These are not easy questions, and they require a multidisciplinary approach involving technologists, ethicists, sociologists, and policymakers. Building a future with AI that is not only intelligent but also wise and just is one of the greatest challenges of our time.</p>
     `,
     tags: ['AI', 'Ethics', 'Society'],
-    bloggerUrl: '#',
+    bloggerUrl: 'https://rimshatechblogs.blogspot.com/2026/03/the-ai-revolution-how-artificial.html',
     views: 899
   },
   {
@@ -122,7 +122,7 @@ const posts: BlogPost[] = [
       <p>At their core, neural networks are composed of interconnected layers of "neurons" or nodes. Each connection has a weight that is adjusted during the training process. When you feed data into the input layer, it passes through one or more "hidden" layers, where the neurons perform calculations and pass their results on. Finally, the output layer provides the result, whether it's identifying a cat in a photo or translating a sentence. The "deep" in deep learning refers to networks with many hidden layers, allowing them to learn incredibly complex patterns and hierarchies from vast amounts of data. Understanding this fundamental architecture is the first step to grasping the magic of modern AI.</p>
     `,
     tags: ['AI', 'Deep Learning', 'Neural Networks'],
-    bloggerUrl: '#',
+    bloggerUrl: 'https://rimshatechblogs.blogspot.com/2026/03/the-ai-revolution-how-artificial.html',
     views: 2104
   }
 ];
