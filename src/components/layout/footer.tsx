@@ -12,8 +12,8 @@ const navItems = [
 export function Footer() {
   return (
     <footer className="w-full border-t border-border/20 bg-background/50 backdrop-blur-sm">
-      <div className="container mx-auto grid grid-cols-1 gap-8 px-4 py-12 md:grid-cols-3 md:px-6">
-        <div className="flex flex-col items-start gap-4">
+      <div className="container mx-auto grid grid-cols-1 gap-8 px-4 py-12 text-center md:grid-cols-3 md:text-left md:px-6">
+        <div className="flex flex-col items-center md:items-start gap-4">
           <Link href="/" className="flex items-center space-x-3">
             <Logo />
             <span className="text-lg font-bold font-headline">Rimsha's Tech Blogs</span>
@@ -23,7 +23,7 @@ export function Footer() {
             <br />
             Exploring the frontiers of AI and Robotics.
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 justify-center md:justify-start">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <Github className="h-5 w-5" />
             </a>
@@ -47,9 +47,9 @@ export function Footer() {
             ))}
           </ul>
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 items-center md:items-end">
           <h4 className="font-headline font-semibold tracking-wider text-foreground">Subscribe to Newsletter</h4>
-          <p className="text-sm text-muted-foreground">Get the latest insights on AI and robotics delivered to your inbox.</p>
+          <p className="text-sm text-muted-foreground md:text-right">Get the latest insights on AI and robotics delivered to your inbox.</p>
           <NewsletterForm />
         </div>
       </div>

@@ -11,8 +11,6 @@ import { ThemeToggle } from '@/components/theme-toggle';
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/blog', label: 'Blog' },
-  { href: '/trends', label: 'AI Trends' },
-  { href: '/robotics', label: 'Robotics' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -40,30 +38,32 @@ export function Header() {
             </span>
           </Link>
           
-          <nav className="hidden md:flex items-center space-x-1 text-sm font-medium absolute left-1/2 -translate-x-1/2">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  'transition-colors rounded-full px-4 py-2 hover:text-primary hover:bg-primary/10',
-                  pathname === item.href ? 'text-primary bg-primary/10' : 'text-muted-foreground'
-                )}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+          <div className="flex items-center gap-4">
+              <nav className="hidden md:flex items-center space-x-1 text-sm font-medium">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={cn(
+                      'transition-colors rounded-full px-4 py-2 hover:text-primary hover:bg-primary/10',
+                      pathname === item.href ? 'text-primary bg-primary/10' : 'text-muted-foreground'
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
 
-          <div className="flex items-center gap-2">
-            <ThemeToggle />
-            <button
-              className="p-2 md:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle Menu"
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+              <div className="flex items-center gap-2">
+                <ThemeToggle />
+                <button
+                  className="p-2 md:hidden"
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  aria-label="Toggle Menu"
+                >
+                  {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                </button>
+              </div>
           </div>
         </div>
       </header>
