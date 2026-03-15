@@ -25,19 +25,7 @@ export default function AboutPage() {
       </section>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
-        <div className="md:col-span-1 flex justify-center">
-          <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-2xl shadow-primary/20 border-4 border-primary/50">
-            {aboutImage && (
-              <Image
-                src={aboutImage.imageUrl}
-                alt="Portrait of Rimsha"
-                fill
-                data-ai-hint={aboutImage.imageHint}
-                className="object-cover"
-              />
-            )}
-          </div>
-        </div>
+        
         <div className="md:col-span-2 space-y-6">
           <h2 className="font-headline text-3xl font-semibold text-primary">Rimsha</h2>
           <div className="flex flex-wrap gap-3 items-center">

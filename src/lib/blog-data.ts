@@ -9,7 +9,7 @@ const posts: BlogPost[] = [
     slug: 'the-ai-revolution',
     title: 'The AI Revolution: How Artificial Intelligence is Changing Our World',
     author: "Rimsha",
-    date: '2024-07-20',
+    date: '2026-03-15',
     image: blogImage?.imageUrl || 'https://picsum.photos/seed/110/600/400',
     imageHint: blogImage?.imageHint || 'AI robot',
     excerpt: 'An exploration of the profound impact of Artificial Intelligence on society, industry, and our daily lives. Read the full post on my Blogger site.',

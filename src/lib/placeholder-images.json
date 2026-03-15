@@ -1,15 +1,10 @@
 {
   "placeholderImages": [
-    {
-      "id": "about-me",
-      "description": "Portrait of a student in a university setting",
-      "imageUrl": "https://picsum.photos/seed/105/500/500",
-      "imageHint": "university student"
-    },
+ 
     {
       "id": "blog-main",
       "description": "Abstract AI visualization",
-      "imageUrl": "https://picsum.photos/seed/110/600/400",
+      "imageUrl": "/assets/image-1.png",
       "imageHint": "AI robot"
     }
   ]
