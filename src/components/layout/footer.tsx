@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Github, Linkedin, Mail } from 'lucide-react';
 import { Logo } from '../common/logo';
 
 const navItems = [
@@ -22,17 +21,6 @@ export function Footer() {
             <br />
             Exploring the frontiers of AI and Robotics.
           </p>
-          <div className="flex gap-4 justify-center md:justify-start">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Github className="h-5 w-5" />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Linkedin className="h-5 w-5" />
-            </a>
-            <a href="mailto:cu240251326@coeruniversity.ac.in" className="text-muted-foreground hover:text-primary transition-colors">
-              <Mail className="h-5 w-5" />
-            </a>
-          </div>
         </div>
         <div className="md:justify-self-end">
           <h4 className="font-headline font-semibold tracking-wider text-foreground md:text-right">Navigate</h4>
