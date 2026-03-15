@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import { NewsletterForm } from '../common/newsletter-form';
 import { Logo } from '../common/logo';
 
 const navItems = [
@@ -12,7 +11,7 @@ const navItems = [
 export function Footer() {
   return (
     <footer className="w-full border-t border-border/20 bg-background/50 backdrop-blur-sm">
-      <div className="container mx-auto grid grid-cols-1 gap-8 px-4 py-12 text-center md:grid-cols-3 md:text-left md:px-6">
+      <div className="container mx-auto grid grid-cols-1 gap-8 px-4 py-12 text-center md:grid-cols-2 md:text-left md:px-6">
         <div className="flex flex-col items-center md:items-start gap-4">
           <Link href="/" className="flex items-center space-x-3">
             <Logo />
@@ -35,9 +34,9 @@ export function Footer() {
             </a>
           </div>
         </div>
-        <div className="md:justify-self-center">
-          <h4 className="font-headline font-semibold tracking-wider text-foreground">Navigate</h4>
-          <ul className="mt-4 space-y-2">
+        <div className="md:justify-self-end">
+          <h4 className="font-headline font-semibold tracking-wider text-foreground md:text-right">Navigate</h4>
+          <ul className="mt-4 space-y-2 md:text-right">
             {navItems.map((item) => (
               <li key={item.label}>
                 <Link href={item.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -46,11 +45,6 @@ export function Footer() {
               </li>
             ))}
           </ul>
-        </div>
-        <div className="flex flex-col gap-2 items-center md:items-end">
-          <h4 className="font-headline font-semibold tracking-wider text-foreground">Subscribe to Newsletter</h4>
-          <p className="text-sm text-muted-foreground md:text-right">Get the latest insights on AI and robotics delivered to your inbox.</p>
-          <NewsletterForm />
         </div>
       </div>
       <div className="border-t border-border/20">
