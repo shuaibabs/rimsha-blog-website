@@ -6,20 +6,20 @@ import { Button } from '@/components/ui/button';
 import { GridAnimation } from '@/components/common/grid-animation';
 
 export default function Home() {
-  const featuredPosts = getFeaturedPosts(4);
+  const featuredPosts = getFeaturedPosts(1);
 
   const features = [
     {
       icon: <Zap className="h-8 w-8 text-accent" />,
       title: 'Latest AI Innovations',
       description: 'Explore breakthroughs in machine learning, neural networks, and generative AI.',
-      href: '/trends',
+      href: '/blog',
     },
     {
       icon: <Bot className="h-8 w-8 text-accent" />,
       title: 'Future of Robotics',
       description: 'Discover advancements in automation, humanoid robots, and their societal impact.',
-      href: '/robotics',
+      href: '/blog',
     },
     {
       icon: <Cpu className="h-8 w-8 text-accent" />,
@@ -47,7 +47,7 @@ export default function Home() {
             <div className="mt-8 flex justify-center gap-4 animate-fade-in-up [animation-delay:600ms]">
               <Button asChild size="lg">
                 <Link href="/blog">
-                  Explore Blogs <ArrowRight className="ml-2 h-5 w-5" />
+                  Explore Blog <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
@@ -82,21 +82,16 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center text-center mb-12">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Featured Posts
+              Featured Post
             </h2>
             <p className="mt-3 max-w-2xl text-muted-foreground md:text-xl">
-              Hand-picked articles to get you started on your journey into the future of tech.
+              Read my latest article on the AI Revolution over on my Blogger site.
             </p>
           </div>
-          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
+          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center">
             {featuredPosts.map((post) => (
               <BlogPostCard key={post.id} post={post} />
             ))}
-          </div>
-          <div className="mt-12 text-center">
-            <Button asChild size="lg" variant="outline">
-              <Link href="/blog">View All Posts</Link>
-            </Button>
           </div>
         </div>
       </section>

@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { ArrowRight, Calendar, User } from 'lucide-react';
 import type { BlogPost } from '@/lib/types';
 import { Badge } from '@/components/ui/badge';
@@ -14,7 +13,7 @@ import {
 export function BlogPostCard({ post }: { post: BlogPost }) {
   return (
     <Card className="group overflow-hidden flex flex-col bg-transparent border border-border/30 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10">
-      <Link href={`/blog/${post.slug}`} className="block">
+      <a href={post.bloggerUrl} target="_blank" rel="noopener noreferrer" className="block">
         <div className="overflow-hidden relative aspect-video">
           <Image
             src={post.image}
@@ -24,7 +23,7 @@ export function BlogPostCard({ post }: { post: BlogPost }) {
             className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
         </div>
-      </Link>
+      </a>
       <div className='flex flex-col flex-grow p-6 bg-card/50 backdrop-blur-sm'>
         <CardHeader className="p-0">
           <div className="flex flex-wrap gap-2 mb-2">
@@ -33,9 +32,9 @@ export function BlogPostCard({ post }: { post: BlogPost }) {
             ))}
           </div>
           <CardTitle className="font-headline text-xl leading-tight">
-            <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
+            <a href={post.bloggerUrl} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
               {post.title}
-            </Link>
+            </a>
           </CardTitle>
         </CardHeader>
         <CardContent className="p-0 flex-grow pt-4">
@@ -52,9 +51,9 @@ export function BlogPostCard({ post }: { post: BlogPost }) {
                   <time dateTime={post.date}>{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</time>
               </div>
           </div>
-          <Link href={`/blog/${post.slug}`} className="text-sm font-semibold text-primary/80 flex items-center gap-1 group-hover:text-primary group-hover:gap-2 transition-all">
+          <a href={post.bloggerUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-primary/80 flex items-center gap-1 group-hover:text-primary group-hover:gap-2 transition-all">
             Read <ArrowRight className="h-4 w-4" />
-          </Link>
+          </a>
         </CardFooter>
       </div>
     </Card>
